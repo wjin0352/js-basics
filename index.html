@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+	<script src="js/jquery.js"></script>
+
+
+	<script>
+	$(window).load(init);
+
+	function init(){
+		b = new trigBlocks();
+
+		b.colorThem();
+	}
+
+	var trigBlocks= function(){
+		colors = ['red', 'blue', 'yellow'];
+
+		this.colorThem = function(){
+
+
+			$('.thingy').each(function(index){
+
+				
+				$(this).css({'background-color' : colors[index]})
+
+			})
+
+		}
+	}
+	</script>
+	
+
+	<style>
+	.thingy {
+		height: 100px;
+		width:100px;
+		background-color: blue;
+		margin:10px;
+		display:block;
+
+		}
+		</style>
+
+</head>
+
+
+<body>
+	<div class="thingy"></div>
+	<div class="thingy"></div>
+	<div class="thingy"></div>
+
+</body>
+
+</html>
